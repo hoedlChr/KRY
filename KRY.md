@@ -79,11 +79,16 @@
 * Full Privacy (Vollständige Privatsphäre)
   * Umfassender Schutz der Privatsphäre
 # Was bedeutet Vertraulichkeit? Durch welche Verfahren kann Vertraulichkeit sichergestellt werden?
+* Daten können nur von den vorgesehenen Empfängern gelesen werden
+* Verschlüsselung, Zugriffkontrolle, Authentifizierung, Datensicherheit, klare Richtlinien
 # Kann es vollständige Vertraulichkeit (= Null Informationsgewinn) geben?
 # Was ist Integrität? Kann es Integrität ohne Vertraulichkeit geben?
 # Was ist Unterschied zwischen Authentizität und Verbindlichkeit? Welche Verfahren stellen Authentizität sicher, aber nicht Verbindlichkeit- Welche Verfahren stellen beides sicher?
 # Was sind die Eigenschaften symmetrischer Verschlüsselung im Allgemeinen?
+* Ohne Schlüssel kann Mallory die Nachricht nicht entschlüsseln
+* ein Schlüssel der ent- und verschlüsselt
 # Was besagt das Prinzip von Kerckhoffs?
+* Ein Kryptosystem muss auf die Sicherheit des Key s vertrauen und nicht auf die vom Algorythmus
 # Was sind die Eigenschaften monoalphabetischer Substitution
 * Zeichen durch andere Zeichen ersetzen
 * Code of Mary Stuart, Cäsar-Chiffre, rot13,...
@@ -113,10 +118,35 @@
 * Fault Analysis
   * versucht das Kryptosystem in einen Fehlerzustand zu zwingen
 # Was ist ein Klartextangriff?
+* Der Angreifer kennt eine bekannte Nachricht (Klartext) und den zugehörigen Geheimtext und versucht, den Schlüssel zu finden 
 # KERCKHOFFS‘ PRINCIPLE
+* Ein Kryptosystem muss auf die Sicherheit des Key s vertrauen und nicht auf die vom Algorythmus
 # Kryptographische Schlüssel (KEY MANAGEMENT BEST PRACTICES, SCHLÜSSELVERTEILUNG)
+* geheime Zeichenfolgen/Zahlen - zum Daten ver und entschlüsseln
+* **Key Management Best Practices**
+* Bewahren Sie die geheimen Schlüssel immer sicher auf
+* Schlüssel muss Zufällig sein
+* Schlüssel muss (wenn nicht mehr benötigt) vernichtet werden
+* Schlüssel halbieren und zwei Personen geben (wenn es sehr wichtig ist)
+* **Schlüsselverteilung**
+* Offline Verteilung - physisch zwischen den Parteien ausgetauscht
+* Verschlüsselung mti öffentlichem Schlüssel
+* Diffie Helmman Schlüsselaustausch
 # Vor- und Nachteile der Symmetrischen Kryptographie
+* **Vorteile**
+* Effizienz
+* Geringer Overhead
+* Enfache Schlüsselverwaltung
+* Sichere bei richtiger Umsetzung
+* Vielseitig
+* **Nachteile**
+* Schlüsselverteilung
+* Keine "Non-Repudiation" - Man kann nicht sagen von wem die Nachricht kommt
+* Nicht skalierbar
+* Häufige Schlüsselneugenerierung - wenn teilnehmer die Gruppe verlassen
 # Was ist das Ziel der homophonen Verschlüsselung? Warum ist sie heute nicht mehr ausreichend sicher?
+* Buchstaben die häufig vorkommen werden durch verschiedene Zeichen ersetzt
+* zuordnung unveränderlich, weist ein muster auf
 # Was ist polyalphabetische Substitution- Warum bietet sie eine höhere Sicherheit als monoalphabetische Substitution?
 * Buchstaben durch andere ersetzen, wobei verschiedene Alphabete verwendet werden
 + Vignere-Chiffre
