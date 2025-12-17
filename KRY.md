@@ -406,18 +406,43 @@ Schlüsselstrom: pseudozufälligen schlüsselstrom und verknüpfen diesen im lau
 * Blockchiffren
   * Vorteile
   * Nachteile
+  * Beispiele
 * Stromchiffren
   * Vorteile
+      * Wenn ein Bit im Ciffer defeket ist nur ein bit im Klartext deffekt
+      * Kann gebuffert werden, vorausberechnet
   * Nachteile
+      * Auf initialiserung recht hoch
+      * Immer vollständige text entschlüsselt
+  * Beispiele
+      * A5 (Mobiltelefonie)
+      * RC4 (SSL/TLS)
+      * SALSA20
 
 # Wie funktioniert eine Stromchiffre? Worauf beruht die Sicherheit einer Stromchiffre?
+* Klartext wird bitweise mit Schlüssel verknüpft
+* Hohe Geschwindigkeit, niedrige Hardware Komplexität
 # Welche Rolle spielt Zufall bei Stromchiffren? Welche Rolle hat der Pseudozufallsgenerator?
+* solange sich die bits nicht wiederholen ist der schlüssel sicher
+* Sicherheit hängt von den Bits der Schlüsselstroms ab
 # Was muss beim praktischen Einsatz von Stromchiffren beachtet werden?
 # Nennen Sie einige Stromchiffren und deren Sicherheit.
+* RC4 - unsicher
+* A5
+* Salsa
 # Warum stellen Stromchiffren die Integrität der Daten nicht sicher?
+* keine Prüfsumme
+* keine Signatur
+* keinen MAC
 # Was muss erfüllt sein, damit Stromchiffren gegen Klartextangriffe sicher sind?
+* Der schlüssel muss gleich lang wie der text sein
+* Man darf den schlüssel nur einmal verwenden
 # Wie sieht Diffusion und Konfusion im Zusammenhang mit Stromchiffren aus? Wie, wenn man diese Begriffe auf den PRNG anwendet?
+* XOR - keine Diffusion, keine Konfusion
+* PRNG - alles, was zählt
 # Was sind Blockchiffren? Welche wesentlichen Eigenschaften haben sie?
+* Daten werden in Blöcken verschlüsselt (getrennt)
+* DES AES
 # Was kann über die Eigenschaften einzelner Blöcke gesagt werden?
 # Welche Eigenschaften hat der ECB Modus?
 # Welche Integrität bietet ECB? Welche Vertraulichkeit?
